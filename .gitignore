@@ -1,18 +1,27 @@
 # See https://www.dartlang.org/guides/libraries/private-files
+# See https://github.com/KevinZhang19870314/flutter_getx_boilerplate/blob/master/.gitignore
 
-# MacOS DS_Store
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
 
 # Files and directories created by pub
 .dart_tool/
 .packages
-build/
+/build/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
-doc/api/
+**/doc/api/
 
 # Avoid committing generated Javascript files:
 *.dart.js
@@ -22,6 +31,27 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Flutter related
+.flutter-plugins
+.flutter-plugins-dependencies
+**/ios/Flutter/.last_build_id
+.pub-cache/
+.pub/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
