@@ -1,10 +1,12 @@
 part of 'app_pages.dart';
 
 abstract class Routes {
-  static const SPLASH = '/';
-  static const AUTH = '/auth';
-  static const LOGIN = '/login';
-  static const REGISTER = '/register';
-  static const HOME = '/home';
-  static const CARDS = '/cards';
+  static const splash = '/';
+  static const auth = '/auth';
+  static const login = '/login';
+  static const register = '/register';
+  static const home = '/home';
+  static const explore = '/explore';
+  static const history = '/history';
+  static const account = '/account';
 }

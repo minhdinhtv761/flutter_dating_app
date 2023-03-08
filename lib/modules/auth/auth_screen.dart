@@ -50,14 +50,14 @@ class AuthScreen extends GetView<AuthController> {
         GradientButton(
           text: 'Sign In',
           onPressed: () {
-            Get.toNamed(Routes.AUTH + Routes.LOGIN, arguments: controller);
+            Get.toNamed(Routes.auth + Routes.login, arguments: controller);
           },
         ),
         SizedBox(height: 20.0),
         BorderButton(
           text: 'Sign Up',
           onPressed: () {
-            Get.toNamed(Routes.AUTH + Routes.REGISTER, arguments: controller);
+            Get.toNamed(Routes.auth + Routes.register, arguments: controller);
           },
         ),
         SizedBox(height: 62.0),

@@ -50,20 +50,21 @@ class _CardsScreenState extends State<CardsScreen> {
       body: Container(
         margin: EdgeInsets.all(8.0),
         height: SizeConfig().screenHeight * .7,
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemBuilder: (context, index) {
-            BankCard card = cards[index];
-            return FocusedMenuHolder(
-              child: BankCardBox(
-                cardType: card.cardBrand,
-                cardNum: card.cardNumber,
-              ),
-              menuContent: _buildMenuItems(card),
-            );
-          },
-          itemCount: cards.length,
-        ),
+        child: Text('Hello, I\'m cards'),
+        // child: ListView.builder(
+        //   shrinkWrap: true,
+        //   itemBuilder: (context, index) {
+        //     BankCard card = cards[index];
+        //     return FocusedMenuHolder(
+        //       child: BankCardBox(
+        //         cardType: card.cardBrand,
+        //         cardNum: card.cardNumber,
+        //       ),
+        //       menuContent: _buildMenuItems(card),
+        //     );
+        //   },
+        //   itemCount: cards.length,
+        // ),
       ),
     );
   }

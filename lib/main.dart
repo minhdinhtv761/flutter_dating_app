@@ -23,7 +23,7 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       enableLog: true,
-      initialRoute: Routes.SPLASH,
+      initialRoute: Routes.home,
       defaultTransition: Transition.fade,
       getPages: AppPages.routes,
       initialBinding: AppBinding(),

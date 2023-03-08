@@ -7,29 +7,29 @@ import 'package:get/get.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.splash;
 
   static final routes = [
     GetPage(
-      name: Routes.SPLASH,
+      name: Routes.splash,
       page: () => SplashScreen(),
       binding: SplashBinding(),
     ),
     GetPage(
-      name: Routes.AUTH,
+      name: Routes.auth,
       page: () => AuthScreen(),
       binding: AuthBinding(),
       children: [
-        GetPage(name: Routes.REGISTER, page: () => RegisterScreen()),
-        GetPage(name: Routes.LOGIN, page: () => LoginScreen()),
+        GetPage(name: Routes.register, page: () => RegisterScreen()),
+        GetPage(name: Routes.login, page: () => LoginScreen()),
       ],
     ),
     GetPage(
-        name: Routes.HOME,
+        name: Routes.home,
         page: () => HomeScreen(),
         binding: HomeBinding(),
         children: [
-          GetPage(name: Routes.CARDS, page: () => CardsScreen()),
+          GetPage(name: Routes.history, page: () => CardsScreen()),
         ]),
   ];
 }
