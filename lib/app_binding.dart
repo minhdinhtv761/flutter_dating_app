@@ -1,5 +1,8 @@
-import 'package:flutter_dating_app/api/api.dart';
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import 'api/api.dart';
 
 class AppBinding extends Bindings {
   @override

@@ -1,5 +1,7 @@
+// Dart imports:
 import 'dart:async';
 
+// Package imports:
 import 'package:get/get_connect/http/src/request/request.dart';
 
 FutureOr<Request> authInterceptor(request) async {

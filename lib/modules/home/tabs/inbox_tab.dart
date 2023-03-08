@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
-import 'package:flutter_dating_app/shared/widgets/msg/msg_box.dart';
+
+// Project imports:
+import '../../../shared/shared.dart';
+import '../../../shared/widgets/msg/msg_box.dart';
 
 class InboxTab extends StatefulWidget {
   const InboxTab({Key? key}) : super(key: key);

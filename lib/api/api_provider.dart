@@ -1,6 +1,9 @@
-import 'package:flutter_dating_app/api/base_provider.dart';
-import 'package:flutter_dating_app/models/models.dart';
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import '../models/models.dart';
+import 'base_provider.dart';
 
 class ApiProvider extends BaseProvider {
   Future<Response> login(String path, LoginRequest data) {

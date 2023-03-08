@@ -1,9 +1,14 @@
-import 'package:cached_network_image/cached_network_image.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/modules/home/home.dart';
-import 'package:flutter_dating_app/routes/routes.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Package imports:
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:get/get.dart';
+
+// Project imports:
+import '../../../routes/routes.dart';
+import '../../../shared/shared.dart';
+import '../home.dart';
 
 class MeTab extends GetView<HomeController> {
   @override

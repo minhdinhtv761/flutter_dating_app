@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:math';
 
-import 'package:flutter_dating_app/api/api.dart';
-import 'package:flutter_dating_app/models/response/users_response.dart';
-import 'package:flutter_dating_app/modules/home/home.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+// Package imports:
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+// Project imports:
+import '../../api/api.dart';
+import '../../models/response/users_response.dart';
+import '../../shared/shared.dart';
+import 'home.dart';
 
 class HomeController extends GetxController {
   final ApiRepository apiRepository;

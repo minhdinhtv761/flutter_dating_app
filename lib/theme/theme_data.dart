@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Project imports:
+import '../shared/shared.dart';
 
 class ThemeConfig {
   static ThemeData createTheme({

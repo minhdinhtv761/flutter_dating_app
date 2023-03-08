@@ -1,7 +1,10 @@
-import 'package:flutter_dating_app/routes/routes.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+// Package imports:
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+// Project imports:
+import '../../routes/routes.dart';
+import '../../shared/shared.dart';
 
 class SplashController extends GetxController {
   @override

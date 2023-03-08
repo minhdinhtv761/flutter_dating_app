@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:get/get.dart';
 
+// Project imports:
 import 'home_controller.dart';
 
 class HomeBinding implements Bindings {

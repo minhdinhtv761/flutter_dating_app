@@ -1,12 +1,16 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
 import 'package:get/get.dart';
 
+// Project imports:
 import 'app_binding.dart';
 import 'di.dart';
 import 'lang/lang.dart';
 import 'routes/routes.dart';
+import 'shared/shared.dart';
 import 'theme/theme.dart';
 
 void main() async {

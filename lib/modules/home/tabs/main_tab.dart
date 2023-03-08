@@ -1,11 +1,15 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/models/response/users_response.dart';
-import 'package:flutter_dating_app/modules/home/home.dart';
-import 'package:flutter_dating_app/shared/constants/colors.dart';
 
+// Package imports:
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+
+// Project imports:
+import '../../../models/response/users_response.dart';
+import '../../../shared/constants/colors.dart';
+import '../home.dart';
 
 class MainTab extends GetView<HomeController> {
   @override

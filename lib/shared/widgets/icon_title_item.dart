@@ -1,6 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/shared/constants/constants.dart';
+
+// Package imports:
 import 'package:flutter_svg/svg.dart';
+
+// Project imports:
+import '../constants/constants.dart';
 
 class IconTitleItem extends StatelessWidget {
   const IconTitleItem({

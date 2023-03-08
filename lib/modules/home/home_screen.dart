@@ -1,10 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/modules/home/home.dart';
-import 'package:flutter_dating_app/modules/home/tabs/tabs.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
 
+// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+
+// Project imports:
+import '../../shared/shared.dart';
+import 'home.dart';
+import 'tabs/tabs.dart';
 
 class HomeScreen extends GetView<HomeController> {
   @override

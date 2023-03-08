@@ -1,7 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/modules/auth/auth.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import '../../shared/shared.dart';
+import 'auth.dart';
 
 class RegisterScreen extends StatelessWidget {
   final AuthController controller = Get.arguments;

@@ -1,7 +1,12 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Package imports:
 import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
+
+// Project imports:
+import '../shared.dart';
 
 class GradientBackground extends StatelessWidget {
   /// 是否需要水波浪

@@ -1,8 +1,9 @@
+// Dart imports:
 import 'dart:async';
 
-import 'package:flutter_dating_app/models/models.dart';
-import 'package:flutter_dating_app/models/response/users_response.dart';
-
+// Project imports:
+import '../models/models.dart';
+import '../models/response/users_response.dart';
 import 'api.dart';
 
 class ApiRepository {

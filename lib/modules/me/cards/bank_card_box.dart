@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Project imports:
+import '../../../shared/shared.dart';
 
 class BankCardBox extends StatelessWidget {
   const BankCardBox({

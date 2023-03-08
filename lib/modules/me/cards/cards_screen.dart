@@ -1,8 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/models/bank_card.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
-import 'package:flutter_dating_app/shared/widgets/focused_menu/focused_menu_holder.dart';
 
+// Project imports:
+import '../../../models/bank_card.dart';
+import '../../../shared/shared.dart';
+import '../../../shared/widgets/focused_menu/focused_menu_holder.dart';
 import 'bank_card_box.dart';
 
 class CardsScreen extends StatefulWidget {

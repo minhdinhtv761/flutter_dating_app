@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import 'focused_menu_details.dart';
 
 /// Reference: https://retroportalstudio.medium.com/focused-pop-up-menu-in-flutter-15766d0ab414

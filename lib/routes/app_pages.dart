@@ -1,8 +1,11 @@
-import 'package:flutter_dating_app/modules/auth/auth.dart';
-import 'package:flutter_dating_app/modules/home/home.dart';
-import 'package:flutter_dating_app/modules/me/cards/cards_screen.dart';
-import 'package:flutter_dating_app/modules/modules.dart';
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import '../modules/auth/auth.dart';
+import '../modules/home/home.dart';
+import '../modules/me/cards/cards_screen.dart';
+import '../modules/modules.dart';
 
 part 'app_routes.dart';
 

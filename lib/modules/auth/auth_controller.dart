@@ -1,10 +1,15 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_dating_app/api/api.dart';
-import 'package:flutter_dating_app/models/models.dart';
-import 'package:flutter_dating_app/routes/app_pages.dart';
-import 'package:flutter_dating_app/shared/shared.dart';
+
+// Package imports:
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+// Project imports:
+import '../../api/api.dart';
+import '../../models/models.dart';
+import '../../routes/app_pages.dart';
+import '../../shared/shared.dart';
 
 class AuthController extends GetxController {
   final ApiRepository apiRepository;
