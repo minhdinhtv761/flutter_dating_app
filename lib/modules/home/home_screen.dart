@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 // Project imports:
 import '../../shared/shared.dart';
 import 'home.dart';
-import 'tabs/tabs.dart';
 
 class HomeScreen extends GetView<HomeController> {
   @override

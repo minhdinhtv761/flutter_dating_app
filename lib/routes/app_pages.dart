@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 // Project imports:
 import '../modules/auth/auth.dart';
 import '../modules/home/home.dart';
-import '../modules/me/cards/cards_screen.dart';
 import '../modules/modules.dart';
 
 part 'app_routes.dart';
@@ -28,11 +27,9 @@ class AppPages {
       ],
     ),
     GetPage(
-        name: Routes.home,
-        page: () => HomeScreen(),
-        binding: HomeBinding(),
-        children: [
-          GetPage(name: Routes.history, page: () => CardsScreen()),
-        ]),
+      name: Routes.home,
+      page: () => HomeScreen(),
+      binding: HomeBinding(),
+    )
   ];
 }
