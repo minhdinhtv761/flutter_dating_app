@@ -15,27 +15,27 @@ class HomeController extends GetxController {
   final ApiRepository apiRepository;
   HomeController({required this.apiRepository});
 
-  var currentTab = MainTabs.home.obs;
+  var currentTab = MainTabs.explore.obs;
   var users = Rxn<UsersResponse>();
   var user = Rxn<Datum>();
 
-  late MainTab mainTab;
-  late DiscoverTab discoverTab;
-  late ResourceTab resourceTab;
-  late InboxTab inboxTab;
-  late MeTab meTab;
+  late ExploreTab mainTab;
+  late MatchTab discoverTab;
+  late TopPickTab resourceTab;
+  late HistoryTab inboxTab;
+  late AccountTab meTab;
 
   @override
   void onInit() async {
     super.onInit();
 
-    mainTab = MainTab();
+    mainTab = ExploreTab();
     loadUsers();
 
-    discoverTab = DiscoverTab();
-    resourceTab = ResourceTab();
-    inboxTab = InboxTab();
-    meTab = MeTab();
+    discoverTab = MatchTab();
+    resourceTab = TopPickTab();
+    inboxTab = HistoryTab();
+    meTab = AccountTab();
   }
 
   Future<void> loadUsers() async {
@@ -74,15 +74,15 @@ class HomeController extends GetxController {
 
   int getCurrentIndex(MainTabs tab) {
     switch (tab) {
-      case MainTabs.home:
+      case MainTabs.explore:
         return 0;
-      case MainTabs.discover:
+      case MainTabs.topPick:
         return 1;
-      case MainTabs.resource:
+      case MainTabs.match:
         return 2;
-      case MainTabs.inbox:
+      case MainTabs.history:
         return 3;
-      case MainTabs.me:
+      case MainTabs.account:
         return 4;
       default:
         return 0;
@@ -92,17 +92,17 @@ class HomeController extends GetxController {
   MainTabs _getCurrentTab(int index) {
     switch (index) {
       case 0:
-        return MainTabs.home;
+        return MainTabs.explore;
       case 1:
-        return MainTabs.discover;
+        return MainTabs.topPick;
       case 2:
-        return MainTabs.resource;
+        return MainTabs.match;
       case 3:
-        return MainTabs.inbox;
+        return MainTabs.history;
       case 4:
-        return MainTabs.me;
+        return MainTabs.account;
       default:
-        return MainTabs.home;
+        return MainTabs.explore;
     }
   }
 }

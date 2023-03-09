@@ -23,61 +23,65 @@ class HomeScreen extends GetView<HomeController> {
       body: Center(
         child: _buildContent(controller.currentTab.value),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          _buildNavigationBarItem(
-            "Home",
-            MainTabs.home == controller.currentTab.value
-                ? "icon_home_activited.svg"
-                : "icon_home.svg",
-          ),
-          _buildNavigationBarItem(
-            "Discover",
-            MainTabs.discover == controller.currentTab.value
-                ? "icon_discover_activited.svg"
-                : "icon_discover.svg",
-          ),
-          _buildNavigationBarItem(
-            "Resource",
-            "icon_resource.svg",
-          ),
-          _buildNavigationBarItem(
-            "Inbox",
-            MainTabs.inbox == controller.currentTab.value
-                ? "icon_inbox_activited.svg"
-                : "icon_inbox.svg",
-          ),
-          _buildNavigationBarItem(
-            "Me",
-            MainTabs.me == controller.currentTab.value
-                ? "icon_me_activited.svg"
-                : "icon_me.svg",
-          )
-        ],
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: ColorConstants.black,
-        currentIndex: controller.getCurrentIndex(controller.currentTab.value),
-        selectedItemColor: ColorConstants.black,
-        selectedLabelStyle: TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
+      bottomNavigationBar: _buildBottomNavigationBar(),
+    );
+  }
+
+  Widget _buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      items: [
+        _buildNavigationBarItem(
+          "Explore",
+          MainTabs.explore == controller.currentTab.value
+              ? "icon_home_activited.svg"
+              : "icon_home.svg",
         ),
-        onTap: (index) => controller.switchTab(index),
+        _buildNavigationBarItem(
+          "Top Pick",
+          MainTabs.topPick == controller.currentTab.value
+              ? "icon_discover_activited.svg"
+              : "icon_discover.svg",
+        ),
+        _buildNavigationBarItem(
+          "Match",
+          "icon_resource.svg",
+        ),
+        _buildNavigationBarItem(
+          "History",
+          MainTabs.history == controller.currentTab.value
+              ? "icon_inbox_activited.svg"
+              : "icon_inbox.svg",
+        ),
+        _buildNavigationBarItem(
+          "Account",
+          MainTabs.account == controller.currentTab.value
+              ? "icon_me_activited.svg"
+              : "icon_me.svg",
+        )
+      ],
+      type: BottomNavigationBarType.fixed,
+      unselectedItemColor: ColorConstants.black,
+      currentIndex: controller.getCurrentIndex(controller.currentTab.value),
+      selectedItemColor: ColorConstants.black,
+      selectedLabelStyle: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.bold,
       ),
+      onTap: (index) => controller.switchTab(index),
     );
   }
 
   Widget _buildContent(MainTabs tab) {
     switch (tab) {
-      case MainTabs.home:
+      case MainTabs.explore:
         return controller.mainTab;
-      case MainTabs.discover:
+      case MainTabs.topPick:
         return controller.discoverTab;
-      case MainTabs.resource:
+      case MainTabs.match:
         return controller.resourceTab;
-      case MainTabs.inbox:
+      case MainTabs.history:
         return controller.inboxTab;
-      case MainTabs.me:
+      case MainTabs.account:
         return controller.meTab;
       default:
         return controller.mainTab;
