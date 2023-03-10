@@ -13,6 +13,20 @@ class ThemeConfig {
   }) {
     return ThemeData(
       brightness: brightness,
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          foregroundColor: ColorConstants.black,
+          backgroundColor: ColorConstants.white,
+          minimumSize: const Size(
+            double.infinity,
+            CommonConstants.baseMediumButtonSize,
+          ),
+          side: BorderSide(
+            color: ColorConstants.white,
+            strokeAlign: BorderSide.strokeAlignCenter,
+          ),
+        ),
+      ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: ColorConstants.white,
