@@ -16,10 +16,12 @@ class CommonConstants {
   static const double baseLargeButtonSize = 55.0;
   static const double baseMediumButtonSize = 50.0;
   static const double baseSmallButtonSize = 45.0;
+  static const double baseMinWidth = 225.0;
 
   // Padding
+  static const double baseExtraLargePadding = 32.0;
   static const double baseMediumPadding = 12.0;
 
   // Linear gradient radius
-  static const double gradientRotation = pi / 4;
+  static const double gradientRotation = pi / 4.0;
 }

@@ -16,10 +16,14 @@ class ThemeConfig {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: ColorConstants.white,
-          minimumSize: const Size(64, CommonConstants.baseMediumButtonSize),
+          minimumSize: const Size(
+            double.infinity,
+            CommonConstants.baseMediumButtonSize,
+          ),
           side: BorderSide(
-              color: ColorConstants.white,
-              strokeAlign: BorderSide.strokeAlignCenter),
+            color: ColorConstants.white,
+            strokeAlign: BorderSide.strokeAlignCenter,
+          ),
         ),
       ),
       textTheme: const TextTheme(
