@@ -18,6 +18,9 @@ class CommonConstants {
   static const double baseSmallButtonSize = 45.0;
   static const double baseMinWidth = 225.0;
 
+  // Stroke width
+  static const double baseStrokeWidth = 1.5;
+
   // Padding
   static const double baseExtraLargePadding = 32.0;
   static const double baseMediumPadding = 12.0;

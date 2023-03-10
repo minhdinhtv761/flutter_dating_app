@@ -24,6 +24,7 @@ class ThemeConfig {
           side: BorderSide(
             color: ColorConstants.white,
             strokeAlign: BorderSide.strokeAlignCenter,
+            width: CommonConstants.baseStrokeWidth,
           ),
         ),
       ),
@@ -37,6 +38,7 @@ class ThemeConfig {
           side: BorderSide(
             color: ColorConstants.white,
             strokeAlign: BorderSide.strokeAlignCenter,
+            width: CommonConstants.baseStrokeWidth,
           ),
         ),
       ),
@@ -52,6 +54,7 @@ class ThemeConfig {
         ),
         labelLarge: TextStyle(
           fontSize: CommonConstants.baseMediumText,
+          fontWeight: FontWeight.w600,
         ),
         labelMedium: TextStyle(
           fontSize: CommonConstants.baseSmallText,
