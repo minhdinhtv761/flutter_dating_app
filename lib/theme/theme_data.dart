@@ -42,6 +42,15 @@ class ThemeConfig {
           ),
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: ColorConstants.white,
+          minimumSize: const Size(
+            64, // minimumSize default of Button Style
+            CommonConstants.baseMediumButtonSize,
+          ),
+        ),
+      ),
       textTheme: const TextTheme(
         bodyLarge: TextStyle(
           fontSize: CommonConstants.baseLargeText,
