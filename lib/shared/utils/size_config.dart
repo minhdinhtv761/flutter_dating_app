@@ -1,9 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+import '../shared.dart';
+
 class SizeConfig {
   SizeConfig._();
-  static SizeConfig _instance = SizeConfig._();
+  static final SizeConfig _instance = SizeConfig._();
   factory SizeConfig() => _instance;
 
   late MediaQueryData _mediaQueryData;
@@ -18,6 +20,11 @@ class SizeConfig {
   double? profileDrawerWidth;
   late double refHeight;
   late double refWidth;
+
+  late double largeText = CommonConstants.baseLargeText;
+  late double mediumText = CommonConstants.baseMediumText;
+  late double normalText = CommonConstants.baseMediumText;
+  late double smallText = CommonConstants.baseSmallText;
 
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
@@ -49,34 +56,34 @@ class SizeConfig {
     }
   }
 
-  double getWidthRatio(double val) {
-    double res = (val / refWidth) * 100;
-    double temp = res * blockSizeHorizontal;
+//   double getWidthRatio(double val) {
+//     double res = (val / refWidth) * 100;
+//     double temp = res * blockSizeHorizontal;
 
-    return temp;
-  }
+//     return temp;
+//   }
 
-  double getHeightRatio(double val) {
-    double res = (val / refHeight) * 100;
-    double temp = res * blockSizeVertical;
-    return temp;
-  }
+//   double getHeightRatio(double val) {
+//     double res = (val / refHeight) * 100;
+//     double temp = res * blockSizeVertical;
+//     return temp;
+//   }
 
-  double getFontRatio(double val) {
-    double res = (val / refWidth) * 100;
-    double temp = 0.0;
-    if (screenWidth < screenHeight) {
-      temp = res * safeBlockHorizontal;
-    } else {
-      temp = res * safeBlockVertical;
-    }
+//   double getFontRatio(double val) {
+//     double res = (val / refWidth) * 100;
+//     double temp = 0.0;
+//     if (screenWidth < screenHeight) {
+//       temp = res * safeBlockHorizontal;
+//     } else {
+//       temp = res * safeBlockVertical;
+//     }
 
-    return temp;
-  }
+//     return temp;
+//   }
 }
 
-extension SizeUtils on num {
-  double get toWidth => SizeConfig().getWidthRatio(this.toDouble());
-  double get toHeight => SizeConfig().getHeightRatio(this.toDouble());
-  double get toFont => SizeConfig().getFontRatio(this.toDouble());
-}
+// extension SizeUtils on num {
+//   double get toWidth => SizeConfig().getWidthRatio(this.toDouble());
+//   double get toHeight => SizeConfig().getHeightRatio(this.toDouble());
+//   double get toFont => SizeConfig().getFontRatio(this.toDouble());
+// }

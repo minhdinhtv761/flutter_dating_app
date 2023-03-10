@@ -11,6 +11,10 @@ class ColorConstants {
   static Color darkGray = Color(0xFF9F9F9F);
   static Color black = Color(0xFF000000);
   static Color white = Color(0xFFFFFFFF);
+
+  // Gradient
+  static const lightGradientStart = Color(0xFFFD267A);
+  static const lightGradientEnd = Color(0xFFFF6036);
 }
 
 Color hexToColor(String hex) {
