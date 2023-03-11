@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomFilledButton extends StatelessWidget {
   final String text;
-  final Widget? child;
+  final IconData? icon;
   final double? height;
   final double? width;
   final VoidCallback? onPressed;
@@ -11,7 +11,7 @@ class CustomFilledButton extends StatelessWidget {
   const CustomFilledButton({
     super.key,
     this.text = '',
-    this.child,
+    this.icon,
     this.height,
     this.width,
     this.onPressed,
@@ -24,11 +24,20 @@ class CustomFilledButton extends StatelessWidget {
       height: height,
       child: FilledButton(
         onPressed: onPressed,
-        child: text != ''
+        child: icon == null
             ? Text(
                 text,
               )
-            : child,
+            : Row(
+                children: <Widget>[
+                  Icon(icon),
+                  const Spacer(),
+                  Text(
+                    text,
+                  ),
+                  const Spacer(),
+                ],
+              ),
       ),
     );
   }
