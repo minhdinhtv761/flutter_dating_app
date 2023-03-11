@@ -47,7 +47,7 @@ class AuthScreen extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 5,
           child: Column(
             verticalDirection: VerticalDirection.up,
             children: _buildButtonGroup(),
