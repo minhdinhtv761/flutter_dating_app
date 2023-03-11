@@ -23,6 +23,7 @@ class CommonConstants {
 
   // Padding
   static const double baseExtraLargePadding = 32.0;
+  static const double baseLargePadding = 24.0;
   static const double baseMediumPadding = 12.0;
 
   // Linear gradient radius

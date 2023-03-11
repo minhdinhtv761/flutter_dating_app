@@ -17,59 +17,99 @@ class AuthScreen extends StatelessWidget {
         gradientEnd: ColorConstants.lightGradientEnd,
         gradientRotation: CommonConstants.gradientRotation,
         child: SafeArea(
+          minimum: const EdgeInsets.all(
+            CommonConstants.baseExtraLargePadding,
+          ),
           child: WillPopScope(
             onWillPop: () async => false,
-            child: Column(
-              verticalDirection: VerticalDirection.up,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                CustomOutlinedButton(
-                  text: "SIGN IN",
-                  onPressed: () {
-                    print(SizeConfig().screenWidth);
-                    print(SizeConfig().screenHeight);
-                    print(MediaQuery.of(context).devicePixelRatio);
-                  },
-                ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                CustomOutlinedButton(
-                  text: "CREATE ACCOUNT",
-                  onPressed: () {},
-                )
-              ],
-            ),
+            child: _buildWidget(),
           ),
         ),
       ),
     );
   }
-}
 
-class CustomOutlinedButton extends StatelessWidget {
-  final String text;
-  final Widget? child;
-  final bool isFullWidth;
-  final VoidCallback? onPressed;
+  Column _buildWidget() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const Expanded(
+          flex: 4,
+          child: SizedBox.expand(),
+        ),
+        Expanded(
+          flex: 1,
+          child: SizedBox(
+            width: SizeConfig().screenWidth / 2,
+            child: Image.asset('assets/images/tinder_logo.png'),
+          ),
+        ),
+        Expanded(
+          flex: 4,
+          child: Column(
+            verticalDirection: VerticalDirection.up,
+            children: _buildButtonGroup(),
+          ),
+        ),
+      ],
+    );
+  }
 
-  const CustomOutlinedButton({
-    super.key,
-    this.text = '',
-    this.child,
-    this.isFullWidth = true,
-    this.onPressed,
-  });
+  List<Widget> _buildButtonGroup() {
+    return <Widget>[
+      CustomTextButton(
+        text: 'Trouble signing in?',
+        onPressed: () {},
+      ),
+      const SizedBox(
+        height: CommonConstants.baseMediumPadding,
+      ),
+      CustomOutlinedButton(
+        text: 'SIGN IN',
+        onPressed: () {},
+      ),
+      const SizedBox(
+        height: CommonConstants.baseMediumPadding,
+      ),
+      CustomFilledButton(
+        text: 'CREATE ACCOUNT',
+        onPressed: () {},
+      ),
+      const SizedBox(
+        height: CommonConstants.baseLargePadding,
+      ),
+      _buildPolicyRichText(),
+    ];
+  }
 
-  @override
-  Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: onPressed,
-      child: text != ''
-          ? Text(
-              text,
-            )
-          : child,
+  CustomRichText _buildPolicyRichText() {
+    return CustomRichText(
+      children: <TextSpanParams>[
+        TextSpanParams(
+          text: 'By tapping "Sign in", you agree to our ',
+        ),
+        TextSpanParams(
+          text: 'Terms',
+          style: TextSpanStyle.clickable,
+        ),
+        TextSpanParams(
+          text: '. Learn how we process your data in our ',
+        ),
+        TextSpanParams(
+          text: 'Privacy Policy',
+          style: TextSpanStyle.clickable,
+        ),
+        TextSpanParams(
+          text: ' and ',
+        ),
+        TextSpanParams(
+          text: 'Cookies Policy',
+          style: TextSpanStyle.clickable,
+        ),
+        TextSpanParams(
+          text: '.',
+        ),
+      ],
     );
   }
 }
