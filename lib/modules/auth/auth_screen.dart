@@ -43,7 +43,7 @@ class AuthScreen extends StatelessWidget {
           flex: 1,
           child: SizedBox(
             width: SizeConfig().screenWidth / 2,
-            child: Image.asset('assets/images/tinder_logo.png'),
+            child: Image.asset('assets/images/full_logo_white.png'),
           ),
         ),
         Expanded(
