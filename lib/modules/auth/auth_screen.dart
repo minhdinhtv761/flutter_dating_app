@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import '../../shared/shared.dart';
+import 'widgets/auth_widgets.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
@@ -78,38 +79,7 @@ class AuthScreen extends StatelessWidget {
       const SizedBox(
         height: CommonConstants.baseLargePadding,
       ),
-      _buildPolicyRichText(),
+      const PolicyRichText(),
     ];
-  }
-
-  CustomRichText _buildPolicyRichText() {
-    return CustomRichText(
-      children: <TextSpanParams>[
-        TextSpanParams(
-          text: 'By tapping "Sign in", you agree to our ',
-        ),
-        TextSpanParams(
-          text: 'Terms',
-          style: TextSpanStyle.clickable,
-        ),
-        TextSpanParams(
-          text: '. Learn how we process your data in our ',
-        ),
-        TextSpanParams(
-          text: 'Privacy Policy',
-          style: TextSpanStyle.clickable,
-        ),
-        TextSpanParams(
-          text: ' and ',
-        ),
-        TextSpanParams(
-          text: 'Cookies Policy',
-          style: TextSpanStyle.clickable,
-        ),
-        TextSpanParams(
-          text: '.',
-        ),
-      ],
-    );
   }
 }
