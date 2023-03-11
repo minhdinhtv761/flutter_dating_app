@@ -12,12 +12,13 @@ class AuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
-    return Scaffold(
-      body: GradientBackground(
-        gradientStart: ColorConstants.lightGradientStart,
-        gradientEnd: ColorConstants.lightGradientEnd,
-        gradientRotation: CommonConstants.gradientRotation,
-        child: SafeArea(
+    return GradientBackground(
+      gradientStart: ColorConstants.lightGradientStart,
+      gradientEnd: ColorConstants.lightGradientEnd,
+      gradientRotation: CommonConstants.gradientRotation,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
           minimum: const EdgeInsets.all(
             CommonConstants.baseExtraLargePadding,
           ),
