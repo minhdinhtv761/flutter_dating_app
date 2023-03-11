@@ -13,38 +13,42 @@ class ThemeConfig {
   }) {
     return ThemeData(
       brightness: brightness,
+      colorScheme: ColorScheme(
+        brightness: brightness,
+        primary: ColorConstants.white, // Button, Text, Icon, etc.
+        onPrimary: ColorConstants.black, // Text on Button, etc.
+        secondary: ColorConstants.lightGrey,
+        onSecondary: ColorConstants.darkGrey,
+        error: ColorConstants.red,
+        onError: ColorConstants.white,
+        background: ColorConstants.white, // Scaffold background, etc.
+        onBackground: ColorConstants.lightGrey,
+        surface: ColorConstants.white, // AppBar background, etc.
+        onSurface: ColorConstants.darkGrey,
+      ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          foregroundColor: ColorConstants.black,
-          backgroundColor: ColorConstants.white,
           minimumSize: const Size(
             double.infinity,
             CommonConstants.baseMediumButtonSize,
-          ),
-          side: BorderSide(
-            color: ColorConstants.white,
-            strokeAlign: BorderSide.strokeAlignCenter,
-            width: CommonConstants.baseStrokeWidth,
           ),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          foregroundColor: ColorConstants.white,
           minimumSize: const Size(
             double.infinity,
             CommonConstants.baseMediumButtonSize,
           ),
           side: BorderSide(
             color: ColorConstants.white,
-            strokeAlign: BorderSide.strokeAlignCenter,
+            strokeAlign: BorderSide.strokeAlignInside,
             width: CommonConstants.baseStrokeWidth,
           ),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: ColorConstants.white,
           minimumSize: const Size(
             64, // minimumSize default of Button Style
             CommonConstants.baseMediumButtonSize,

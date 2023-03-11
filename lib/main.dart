@@ -49,7 +49,7 @@ void configLoading() {
     // ..indicatorSize = 45.0
     ..radius = 10.0
     // ..progressColor = Colors.yellow
-    ..backgroundColor = ColorConstants.lightGray
+    ..backgroundColor = ColorConstants.lightGrey
     ..indicatorColor = hexToColor('#64DEE0')
     ..textColor = hexToColor('#64DEE0')
     // ..maskColor = Colors.red
