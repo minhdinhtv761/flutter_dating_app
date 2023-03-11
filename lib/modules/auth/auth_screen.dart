@@ -1,7 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+// Package imports:
+import 'package:get/get.dart';
+
 // Project imports:
+import '../../routes/routes.dart';
 import '../../shared/shared.dart';
 import 'widgets/auth_widgets.dart';
 
@@ -68,14 +72,18 @@ class AuthScreen extends StatelessWidget {
       ),
       CustomOutlinedButton(
         text: 'SIGN IN',
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(Routes.auth + Routes.login);
+        },
       ),
       const SizedBox(
         height: CommonConstants.baseMediumPadding,
       ),
       CustomFilledButton(
         text: 'CREATE ACCOUNT',
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(Routes.auth + Routes.register);
+        },
       ),
       const SizedBox(
         height: CommonConstants.baseLargePadding,
